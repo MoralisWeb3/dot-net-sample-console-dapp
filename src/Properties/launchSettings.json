@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConsoleDemo": {
+      "commandName": "Project",
+      "commandLineArgs": "0xBa878d88c71E0091613798C53B6c72aDd9b9A6a7 1"
+    }
+  }
+}
