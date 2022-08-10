@@ -13,25 +13,18 @@ namespace ConsoleDemo
                 return;
             }
 
-            string address = args[0];
-            int chainId = 1;
-
-            if (!int.TryParse(args[1], out chainId))
-            {
-                Console.Error.WriteLine("CHAIN_ID must be a number.");
-            }
+            string address = "0xBa878d88c71E0091613798C53B6c72aDd9b9A6a7";
+            ChainList chainId = ChainList.eth;
 
             // Setup Moralis Client
             MoralisClient.ConnectionData = new Moralis.Models.ServerConnectionData()
             {
-                AuthenticationApiUrl = "https://authapi.moralis.io",
-                ApiKey = "1kXrzei19HNrb3YvkLaBbOAuRo6SGcmGqmlZ2E6FYFZ2QnqO46rn3xsAX6eRMBns",
-                MasterKey = "RU70zK1m50qEuaLNHBTM2PlqOQ7OzYuVeImcMq4w",
+                ApiKey = "1kXrzei19HNrb3YvkLaBbOAuRo6SGcmGqmlZ2E6FYFZ2QnqO46rn3xsAX6eRMBns"
             };
 
             Task.Run(async () =>
             {
-                await DisplayCryptoData(address, (ChainList)chainId);
+                await DisplayCryptoData(address, chainId);
             }).Wait();
             
         }
